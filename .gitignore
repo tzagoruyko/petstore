@@ -1,0 +1,22 @@
+# PyCharm
+.idea/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.env
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+
+# Test cache
+.pytest_cache/
+
+# Allure
+results/
