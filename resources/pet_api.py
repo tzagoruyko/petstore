@@ -12,10 +12,14 @@ class ApiPet(ApiBase):
     def get_pets_by_status(self, status):
         return self.get(f"{self.PATH}/findByStatus", params=status)
 
-    def update_an_pet(self, payload):
+    def update_pet(self, payload):
         return self.put(self.PATH, json=payload)
 
+    def update_name_and_status_by_form_data(self, pet_id, data):
+        return self.post(f"{self.PATH}/{pet_id}", data=data)
 
+    def delete_pet(self, pet_id):
+        return self.delete(f"{self.PATH}/{pet_id}")
 
 
 
