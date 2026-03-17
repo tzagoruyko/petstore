@@ -22,3 +22,8 @@ def generate_pet_payload(**overrides):
     }
     payload.update(overrides)
     return payload
+
+def generate_data_for_update(**overrides):
+    data = {"name": random.choice(["Barsik", "Persik"]), "status": "sold"}
+    data.update(overrides)
+    return data
