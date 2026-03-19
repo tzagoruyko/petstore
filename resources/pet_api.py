@@ -10,7 +10,7 @@ class ApiPet(ApiBase):
         return self.get(f"{self.PATH}/{pet_id}")
 
     def get_pets_by_status(self, status):
-        return self.get(f"{self.PATH}/findByStatus", params=status)
+        return self.get(f"{self.PATH}/findByStatus", params={"status": status})
 
     def update_pet(self, payload):
         return self.put(self.PATH, json=payload)
